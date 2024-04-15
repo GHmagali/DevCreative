@@ -31,35 +31,28 @@
   }
 }
 
-// Logo
-.site-logo {
-  margin-left: 145px;
-}
-
 // Menu du footer
+
 .menu-footer {
+  margin: 0 auto;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   list-style: none;
-  border-top: 1px solid black;
+  margin-top: 5%;
+  gap: 15%;
 }
 
 .menu-footer li a {
   display: inline;
   text-decoration: none;
-  font-family: SpaceMono;
-  font-size: 16px;
+  font-family: Poppins;
+  font-size: 2rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   color: black;
-  margin-right: 80px;
+  text-transform: uppercase;
   &:hover {
     font-weight: 700;
   }
-}
-
-// Lien statique du menu footer
-#menu-item-107 {
-  pointer-events: none;
-  cursor: default;
 }
