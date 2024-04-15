@@ -1,0 +1,45 @@
+/*
+Theme Name: motaphoto
+Theme URI: http://localhost/motaphoto/
+Author: Magali Bonnard
+Author URI: http://localhost/motaphoto/
+Description: Thème pour la photographe Nathalie Mota
+Requires at least: WordPress 6.0
+Version: 1.0
+Tags: Nathalie Mota, Photographe Event
+Text Domain: motaphoto
+*/
+@import "_font", "_menu", "_modale", "_form", "_single_photo", "_photo_block",
+  "_media-queries";
+
+body {
+  margin: 0;
+}
+
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#left-side {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  h1 {
+    font-family: Poppins;
+    color: rgb(120, 11, 163);
+    font-size: 40px;
+    font-weight: 500;
+  }
+  h2 {
+    font-family: Poppins;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+#right-side {
+  max-width: 1000px;
+  display: flex;
+}
