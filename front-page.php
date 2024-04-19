@@ -6,9 +6,6 @@
         <h1 class="gradient">Développeuse</h1>
         <span class="wordpress">Wordpress</span>
     </div>
-</section>
-
-<div id="projets" class="page-container">
     <h3 class="projets-title">Mes Projets</h3>
     <?php
     $args = array(
@@ -37,7 +34,14 @@
                         <!-- Affiche les langages -->
                         <?php the_field('langages'); ?>
                     </p>
-                    <p>Voir le projet</p>
+                    <button class="project-button project-link">
+                        <a href="<?php echo esc_url(get_permalink()); ?>" class="project-link">
+                            <span class="circle gradient-button" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Voir le Projet</span>
+                        </a>
+                    </button>
                 </div>
                 <div class="project-img">
                     <?php
@@ -54,4 +58,5 @@
         wp_reset_postdata();
     }
     ?>
-</div>
+</section>
+<?php get_footer(); ?>

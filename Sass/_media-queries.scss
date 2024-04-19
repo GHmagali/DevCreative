@@ -1,22 +1,25 @@
 @media (max-width: 767px) {
+  // Burger Menu
   #header {
     width: 100%;
-    height: 72px;
-    position: fixed;
     z-index: 1;
     background-color: white;
     overflow: hidden;
   }
 
   #header-menu {
-    position: fixed;
     z-index: 1;
     left: 0;
-    top: 72px;
     width: 100%;
-    height: 100%;
-    background-color: #e00000;
+    height: 100vh;
+    background-color: #ffffff;
     display: none;
+    li a {
+      padding-bottom: 20px;
+      font-family: poppins-Medium;
+      font-size: 2rem;
+      color: rgb(0, 0, 0);
+    }
     #menu-main_menu {
       display: flex;
       flex-direction: column;
@@ -24,15 +27,12 @@
       align-items: center;
       margin: 0;
       height: 80%;
+      padding: 0;
     }
-    li {
-      padding-bottom: 20px;
-    }
-    a {
-      font-family: SpaceMono;
-      font-size: 44px;
-      color: white;
-    }
+  }
+
+  .current-menu-item::after {
+    bottom: 0;
   }
 
   .burger__btn {
@@ -87,19 +87,29 @@
     display: block;
   }
 
+  // Intro
+  #intro {
+    margin: 50px auto 50px auto;
+  }
+
   #intro h1 {
-    font-size: 10vw; /* Taille de police en vw pour les écrans de taille moyenne */
+    font-size: 11vw; /* Taille de police en vw pour les écrans de taille moyenne */
   }
   #intro h2 {
     font-size: 0.9rem; /* Taille de police en vw pour les écrans de taille moyenne */
   }
 
   .wordpress {
-    font-size: 15vw;
+    font-size: 16vw;
   }
 
+  // Projets
   .projets-title {
-    font-size: 15px;
+    font-size: 17px;
+    margin: 0px 10px 20px 20px;
+    &::after {
+      width: 96%;
+    }
   }
 
   .projets-content {
@@ -110,40 +120,42 @@
     max-width: 500px;
     padding: 0;
     margin: 0 20px 0 20px;
+    .projet-link {
+      font-size: 16px;
+    }
   }
 
   .project-img {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    padding: 0;
+    margin-right: 0;
+  }
+
+  // Menu footer
+  .menu-footer_menu-container li a {
+    font-size: 0.8rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  // Intro
   #intro h1 {
-    font-size: 10vw; /* Taille de police en vw pour les écrans de taille moyenne */
+    font-size: 11vw; /* Taille de police en vw pour les écrans de taille moyenne */
   }
   #intro h2 {
     font-size: 0.9rem; /* Taille de police en vw pour les écrans de taille moyenne */
   }
 
   .wordpress {
-    font-size: 15vw;
+    font-size: 16vw;
   }
 
+  // Projets
   .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
+    margin: 50px 35px 20px 50px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
-  .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
-  }
-
+  // Projets
   .single_projet {
     flex-direction: row;
     padding-top: 50px;
@@ -162,11 +174,7 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
-  .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
-  }
-
+  // Projets
   .project-description {
     max-width: 450px;
     h4 {
@@ -178,6 +186,7 @@
     font-size: 18px;
   }
 
+  // Single Projets
   .single_projet {
     flex-direction: row;
     padding-top: 50px;
@@ -196,6 +205,7 @@
 }
 
 @media (min-width: 1441px) {
+  // Intro
   #intro h1 {
     font-size: 8rem; /* Taille de police en vw pour les écrans de taille moyenne */
   }
@@ -204,11 +214,7 @@
     font-size: 12rem;
   }
 
-  .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
-  }
-
+  // Projets
   .project-description {
     max-width: 450px;
     h4 {
@@ -220,6 +226,7 @@
     font-size: 18px;
   }
 
+  // Single Projets
   .single_projet {
     flex-direction: row;
     padding-top: 50px;

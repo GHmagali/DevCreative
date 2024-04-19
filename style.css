@@ -1,28 +1,42 @@
 @charset "UTF-8";
 /*
-Theme Name: motaphoto
-Theme URI: http://localhost/motaphoto/
+Theme Name: DevCreative
+Theme URI: http://localhost/devcreative/
 Author: Magali Bonnard
-Author URI: http://localhost/motaphoto/
-Description: Thème pour la photographe Nathalie Mota
+Author URI: http://localhost/devcreative/
+Description: Portfolio Développeuse Wordpress
 Requires at least: WordPress 6.0
 Version: 1.0
-Tags: Nathalie Mota, Photographe Event
-Text Domain: motaphoto
+Tags: développeur web
+Text Domain: devcreative
 */
 @font-face {
+  font-family: "Poppins-Light";
+  src: url("./assets/fonts/Poppins-Light.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
   font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins-Medium";
   src: url("./assets/fonts/Poppins-Medium.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("./assets/fonts/Poppins-Light.woff2") format("woff2");
+  font-family: "Poppins-Bold";
+  src: url("./assets/fonts/Poppins-Medium.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
 }
 @font-face {
   font-family: "Neonderthaw-Regular";
@@ -31,13 +45,17 @@ Text Domain: motaphoto
   font-style: normal;
   font-weight: 400;
 }
+#header-menu {
+  max-width: 1200px;
+  margin: auto;
+}
 #header-menu ul {
   display: flex;
   justify-content: end;
   text-align: right;
   gap: 5%;
   list-style: none;
-  margin: 20px 35px 10px 0;
+  margin: 20px 40px 50px 0;
 }
 #header-menu li a {
   display: inline;
@@ -65,39 +83,38 @@ Text Domain: motaphoto
   height: 2px;
   width: 100%;
   border-radius: 4px;
-  background: #eedde2;
+  background: #f4a0ba;
 }
 
 .menu-footer_menu-container {
-  margin: 0;
+  max-width: 1200px;
+  margin: auto;
 }
 .menu-footer_menu-container ul {
-  padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5%;
   list-style: none;
-  margin-top: 5%;
-  margin-left: 5px;
+  margin: 30px 0px 30px 0;
+  padding: 0;
 }
-
-.menu-footer li a {
+.menu-footer_menu-container li a {
   display: inline;
   text-decoration: none;
   font-family: Poppins;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   color: black;
   text-transform: uppercase;
 }
-.menu-footer li a:hover {
-  font-weight: 700;
+.menu-footer_menu-container li a:hover {
+  color: #ea3e8b;
 }
 
 #intro {
   max-width: 1200px;
-  margin: auto;
-  padding-top: 5%;
+  margin: 0 auto 50px auto;
 }
 #intro h1 {
   font-family: Poppins;
@@ -106,7 +123,7 @@ Text Domain: motaphoto
   margin: 0;
 }
 #intro h2 {
-  font-family: Poppins;
+  font-family: Poppins-Bold;
   color: rgb(0, 0, 0);
   font-size: 1rem;
   font-weight: 400;
@@ -122,7 +139,8 @@ Text Domain: motaphoto
 }
 
 .gradient {
-  background: linear-gradient(120deg, #e198af 15%, #ea3e8b 35%, #eb7542 65%);
+  background: linear-gradient(120deg, #f4a0ba 15%, #ea3e8b 35%, #eb7542 75%);
+  -webkit-background-clip: text;
   background-clip: text;
   color: rgba(0, 0, 0, 0);
 }
@@ -136,17 +154,18 @@ Text Domain: motaphoto
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(121, 120, 120);
+  background-color: rgba(123, 119, 119, 0.8);
 }
 
 .modal-content {
   margin: 2% auto;
   padding-top: 10px;
   width: 100%;
-  max-width: 585px;
+  max-width: 600px;
   background-color: white;
-  border: 3px solid black;
+  border-top: 6px solid #f4a0ba;
+  margin-top: 50px;
 }
 
 .slideInDown {
@@ -166,102 +185,80 @@ Text Domain: motaphoto
 }
 /*Formulaire de contact*/
 /*Positionnement du formulaire*/
-.wpcf7 .form {
+.wpcf7 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: white;
-  margin-top: 40px;
-  width: 100%;
-  max-width: 585px;
 }
-.wpcf7 .form p {
-  margin: 0;
+
+.wpcf7-form label {
+  font-family: Poppins;
+  font-size: 15px;
 }
 
 /*Styles des champs*/
-.wpcf7 .form input[type=text] {
-  font-family: Poppins;
-  font-size: 12px;
-  border-radius: 5px;
-  border-color: #b8bbc2;
-  border-width: 1px;
-  margin-top: 3px;
-  margin-bottom: 20px;
-  width: 263px;
-  height: 40px;
-}
-
-.wpcf7 .form input[type=email] {
-  font-family: Poppins;
-  font-size: 12px;
+.wpcf7 .contact input[type=text] {
+  background-color: #fff;
   color: #000;
-  border-radius: 5px;
-  border-color: #b8bbc2;
-  border-width: 1px;
-  margin-top: 3px;
-  margin-bottom: 20px;
-  width: 263px;
-  height: 40px;
-}
-
-.wpcf7 .form textarea {
-  font-family: Poppins;
-  font-size: 12px;
-  color: #000;
-  border-radius: 5px;
-  border-color: #b8bbc2;
-  border-width: 1px;
   margin-top: 5px;
-  margin-bottom: 10px;
-  width: 263px;
-  height: 210px;
+  height: 30%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgb(208, 207, 207);
+}
+
+.wpcf7 .contact input[type=email] {
+  background-color: #fff;
+  color: #000;
+  height: 30px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgb(208, 207, 207);
+}
+
+.wpcf7 .contact textarea {
+  background-color: #fff;
+  color: #000;
+  margin-top: 5px;
+  height: 150px;
+  border: 1px solid rgb(208, 207, 207);
 }
 
 /*Styles des labels*/
-.wpcf7-form label {
-  font-family: Poppins;
-  font-size: 12px;
+.wpcf7 .contact .label-size {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /*Bouton "Envoyer"*/
-.wpcf7 .form input[type=submit] {
-  display: flex;
-  justify-content: center;
-  font-family: SpaceMono;
-  font-size: 12px;
-  width: 268px;
-  height: 50px;
-  background-color: #d8d8d8;
-  border-style: unset;
-}
-
-#projets {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.wpcf7 .contact input[type=submit] {
+  width: 188px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: calc((100% - 188px) / 2);
+  border: 1px solid rgb(208, 207, 207);
 }
 
 .projets-title {
+  max-width: 1200px;
+  margin: 50px 65px 20px 70px;
   position: relative;
   font-family: Poppins;
   font-weight: 300;
   font-size: 20px;
   text-transform: uppercase;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-top: 10%;
 }
 .projets-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
   left: 0;
-  height: 3px;
+  height: 2px;
   width: 100%;
-  background: #f3cbd7;
+  background: #f4a0ba;
 }
 
 .projets-content {
@@ -291,6 +288,91 @@ Text Domain: motaphoto
   font-weight: 400;
 }
 
+.project-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+}
+.project-button.project-link {
+  width: 12rem;
+  height: auto;
+}
+.project-button.project-link .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3em;
+  height: 3em;
+  background: #f4a0ba;
+  border-radius: 1.625rem;
+}
+.project-button.project-link .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #ffffff;
+}
+.project-button.project-link .circle .icon.arrow {
+  left: 1.5rem;
+  height: 0.125rem;
+  background: none;
+}
+.project-button.project-link .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.3rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+.project-button.project-link .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: black;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+.project-button:hover .circle {
+  width: 100%;
+}
+.project-button:hover .circle .icon.arrow {
+  background: white;
+  transform: translate(1rem, 0);
+}
+.project-button:hover .button-text {
+  color: white;
+}
+
+.project-description .projet-link {
+  font-family: Poppins;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .project-img {
   padding: 40px;
   margin-right: 20px;
@@ -308,7 +390,7 @@ Text Domain: motaphoto
 .langages {
   font-family: Poppins;
   color: rgb(120, 11, 163);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -330,7 +412,6 @@ Text Domain: motaphoto
 }
 .single_content h4 {
   font-family: Poppins;
-  word-spacing: -0.3em;
   font-size: 35px;
   font-weight: 400;
   margin-bottom: 0;
@@ -341,12 +422,6 @@ Text Domain: motaphoto
   margin-left: 0;
   font-weight: 400;
   margin-top: 19px;
-}
-
-.gradient {
-  background: linear-gradient(120deg, #e198af 15%, #ea3e8b 35%, #eb7542 65%);
-  background-clip: text;
-  color: rgba(0, 0, 0, 0);
 }
 
 .single_info ul {
@@ -379,21 +454,23 @@ Text Domain: motaphoto
 @media (max-width: 767px) {
   #header {
     width: 100%;
-    height: 72px;
-    position: fixed;
     z-index: 1;
     background-color: white;
     overflow: hidden;
   }
   #header-menu {
-    position: fixed;
     z-index: 1;
     left: 0;
-    top: 72px;
     width: 100%;
-    height: 100%;
-    background-color: #e00000;
+    height: 100vh;
+    background-color: #ffffff;
     display: none;
+  }
+  #header-menu li a {
+    padding-bottom: 20px;
+    font-family: poppins-Medium;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
   }
   #header-menu #menu-main_menu {
     display: flex;
@@ -402,14 +479,10 @@ Text Domain: motaphoto
     align-items: center;
     margin: 0;
     height: 80%;
+    padding: 0;
   }
-  #header-menu li {
-    padding-bottom: 20px;
-  }
-  #header-menu a {
-    font-family: SpaceMono;
-    font-size: 44px;
-    color: white;
+  .current-menu-item::after {
+    bottom: 0;
   }
   .burger__btn {
     width: 30px;
@@ -459,17 +532,24 @@ Text Domain: motaphoto
   #header-menu.active {
     display: block;
   }
+  #intro {
+    margin: 50px auto 50px auto;
+  }
   #intro h1 {
-    font-size: 10vw; /* Taille de police en vw pour les écrans de taille moyenne */
+    font-size: 11vw; /* Taille de police en vw pour les écrans de taille moyenne */
   }
   #intro h2 {
     font-size: 0.9rem; /* Taille de police en vw pour les écrans de taille moyenne */
   }
   .wordpress {
-    font-size: 15vw;
+    font-size: 16vw;
   }
   .projets-title {
-    font-size: 15px;
+    font-size: 17px;
+    margin: 0px 10px 20px 20px;
+  }
+  .projets-title::after {
+    width: 96%;
   }
   .projets-content {
     flex-direction: column;
@@ -479,33 +559,31 @@ Text Domain: motaphoto
     padding: 0;
     margin: 0 20px 0 20px;
   }
+  .project-description .projet-link {
+    font-size: 16px;
+  }
   .project-img {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    padding: 0;
+    margin-right: 0;
+  }
+  .menu-footer_menu-container li a {
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #intro h1 {
-    font-size: 10vw; /* Taille de police en vw pour les écrans de taille moyenne */
+    font-size: 11vw; /* Taille de police en vw pour les écrans de taille moyenne */
   }
   #intro h2 {
     font-size: 0.9rem; /* Taille de police en vw pour les écrans de taille moyenne */
   }
   .wordpress {
-    font-size: 15vw;
+    font-size: 16vw;
   }
   .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
+    margin: 50px 35px 20px 50px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
-  }
   .single_projet {
     flex-direction: row;
     padding-top: 50px;
@@ -521,10 +599,6 @@ Text Domain: motaphoto
   }
 }
 @media (min-width: 1200px) and (max-width: 1440px) {
-  .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
-  }
   .project-description {
     max-width: 450px;
   }
@@ -554,10 +628,6 @@ Text Domain: motaphoto
   }
   .wordpress {
     font-size: 12rem;
-  }
-  .projets-title {
-    margin-left: 7%;
-    margin-right: 5%;
   }
   .project-description {
     max-width: 450px;
@@ -590,4 +660,33 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   display: flex;
+  flex-direction: column;
+}
+
+.wp-block-heading {
+  font-family: Poppins;
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 0 30px 0 30px;
+}
+
+.about-gradient {
+  background: linear-gradient(120deg, #e198af 5%, #ea3e8b 10%, #eb7542 15%);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.about-text {
+  font-family: Poppins;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+  margin-top: 3%;
+  padding: 0 30px 0 30px;
+}
+
+.fixed {
+  position: fixed;
 }/*# sourceMappingURL=style.css.map */
