@@ -602,10 +602,13 @@ Text Domain: devcreative
     flex-direction: column-reverse;
     align-items: center;
   }
-  .wp-block-heading {
-    padding: 30px 30px 0 30px;
+  .single_img img {
+    margin: 55px 20px 20px 20px;
   }
-  .menu-footer_menu-container li a {
+  .single_img img .about-title {
+    padding: 55px 30px 0 30px;
+  }
+  .single_img img .menu-footer_menu-container li a {
     font-size: 0.8rem;
   }
 }
@@ -692,7 +695,7 @@ body {
   flex-direction: column;
 }
 
-.wp-block-heading {
+.about-title {
   font-family: Poppins;
   color: rgb(0, 0, 0);
   font-size: 3rem;
