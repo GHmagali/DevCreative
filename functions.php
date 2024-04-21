@@ -1,5 +1,7 @@
 <?php
 
+remove_action("wp_head", "wp_generator");
+
 ///// Enregistre le menu /////
 function register_menu()
 {

@@ -1,6 +1,6 @@
 const header = document.querySelector("#header");
 const burgerBtn = document.querySelector(".burger__btn");
-// Gére l'animation du bouton du menu et l'animation du menu
+// Gère l'animation du bouton du menu et l'animation du menu
 burgerBtn.addEventListener("click", (e) => {
   // Ajoute ou supprime la classe "active" pour animer le bouton
   e.target.classList.toggle("active");
@@ -12,7 +12,7 @@ burgerBtn.addEventListener("click", (e) => {
 const burgerMenu = document.getElementById("header-menu");
 const icon = document.getElementById("icon");
 
-// Gére l'ouverture du menu
+// Gère l'ouverture du menu
 icon.addEventListener("click", () => {
   // Ajoute ou supprime la classe "active" pour afficher ou cacher le menu
   burgerMenu.classList.toggle("active");
@@ -20,7 +20,7 @@ icon.addEventListener("click", () => {
 
 const burgernav = document.getElementById("header-menu");
 
-// Gére le click sur les liens du menu
+// Gère le click sur les liens du menu
 document.querySelectorAll("li a").forEach((e) =>
   // Supprime la classe "active" pour fermer le menu lorsque l'un des liens est cliqué
   e.addEventListener("click", () => {

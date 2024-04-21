@@ -1,11 +1,4 @@
-@mixin transition(
-  $property: all,
-  $duration: 0.45s,
-  $ease: cubic-bezier(0.65, 0, 0.076, 1)
-) {
-  transition: $property $duration $ease;
-}
-
+// Titre
 .projets-title {
   max-width: 1200px;
   margin: 50px 65px 20px 70px;
@@ -25,6 +18,7 @@
   }
 }
 
+// Contenant
 .projets-content {
   display: flex;
   justify-content: center;
@@ -32,6 +26,7 @@
   margin-bottom: 20px;
 }
 
+// Description
 .project-description {
   padding: 40px;
   max-width: 300px;
@@ -52,111 +47,94 @@
   font-weight: 400;
 }
 
-/////////////////////////////////////////
-// Styles pour les boutons
+// bouton
 .project-button {
   position: relative;
   display: inline-block;
   cursor: pointer;
   outline: none;
-  border: 0;
+  border: none;
   vertical-align: middle;
   text-decoration: none;
   background: transparent;
   padding: 0;
-
-  // Styles spécifiques pour la classe "project-link"
-  &.project-link {
-    width: 12rem;
-    height: auto;
-
-    // Styles pour le cercle
-    .circle {
-      @include transition(all); // Utilisation du mixin transition
-      position: relative;
-      display: block;
-      margin: 0;
-      width: 3em;
-      height: 3em;
-      background: #f4a0ba;
-      border-radius: 1.625rem;
-
-      // Styles pour l'icône à l'intérieur du cercle
-      .icon {
-        @include transition(all); // Utilisation du mixin transition
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background: #ffffff;
-
-        // Styles spécifiques pour l'icône flèche
-        &.arrow {
-          left: 1.5rem;
-          height: 0.125rem;
-          background: none;
-
-          &::before {
-            position: absolute;
-            content: "";
-            top: -0.3rem;
-            right: 0.0625rem;
-            width: 0.625rem;
-            height: 0.625rem;
-            border-top: 0.125rem solid #fff;
-            border-right: 0.125rem solid #fff;
-            transform: rotate(45deg);
-          }
-        }
-      }
-    }
-
-    // Styles pour le texte du bouton
-    .button-text {
-      @include transition(all); // Utilisation du mixin transition
-      position: absolute;
-      top: 0;
-      left: 10px;
-      right: 0;
-      bottom: 0;
-      padding: 0.75rem 0;
-      margin: 0 0 0 1.85rem;
-      color: black;
-      font-family: Poppins;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.4;
-      text-align: center;
-      text-transform: uppercase;
-    }
-  }
-
-  // Styles lorsque le bouton est survolé
-  &:hover {
-    .circle {
-      width: 100%;
-      .icon {
-        &.arrow {
-          background: white;
-          transform: translate(1rem, 0);
-        }
-      }
-    }
-    .button-text {
-      color: white;
-    }
-  }
 }
 
-///////////////////////////////////////////
-.project-description .projet-link {
+.project-button.project-link {
+  width: 12rem;
+  height: auto;
+}
+
+.project-button.project-link .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3em;
+  height: 3em;
+  background: #f4a0ba;
+  border-radius: 1.625rem;
+}
+
+.project-button.project-link .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #ffffff;
+}
+
+.project-button.project-link .circle .icon.arrow {
+  left: 1.5rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.project-button.project-link .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.3rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.project-button.project-link .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: black;
   font-family: Poppins;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
   text-transform: uppercase;
 }
 
+.project-button:hover .circle {
+  width: 100%;
+}
+
+.project-button:hover .circle .icon.arrow {
+  background: white;
+  transform: translate(1rem, 0);
+}
+
+.project-button:hover .button-text {
+  color: white;
+}
+
+// Image
 .project-img {
   padding: 40px;
   margin-right: 20px;
@@ -172,9 +150,10 @@
   }
 }
 
+// Langages
 .langages {
   font-family: Poppins;
   color: rgb(120, 11, 163);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
 }

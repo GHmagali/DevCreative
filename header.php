@@ -14,7 +14,7 @@
 
     <div id="header">
         <nav id="header-menu">
-            <!-- Récupére et affiche le menu principal -->
+            <!-- Menu principal -->
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'main_menu',
@@ -23,7 +23,7 @@
             ));
             ?>
         </nav>
-        <!-- Crée le bouton du menu hamburger sur mobile et tablette -->
+        <!-- Menu Hamburger -->
         <div id="icon" class="burger__btn">
             <span class="line1"></span>
             <span class="line2"></span>

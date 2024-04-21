@@ -11,18 +11,18 @@ Tags: développeur web
 Text Domain: devcreative
 */
 @font-face {
-  font-family: "Poppins-Light";
-  src: url("./assets/fonts/Poppins-Light.woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
   font-family: "Poppins";
   src: url("./assets/fonts/Poppins-Regular.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
   font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("./assets/fonts/Poppins-Light.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
 }
 @font-face {
   font-family: "Poppins-Medium";
@@ -67,8 +67,8 @@ Text Domain: devcreative
   color: black;
   text-transform: uppercase;
 }
-#header-menu li a:hover {
-  font-weight: 400;
+#header-menu li a:hover:hover {
+  color: #ea3e8b;
 }
 
 .current-menu-item {
@@ -165,7 +165,7 @@ Text Domain: devcreative
   max-width: 600px;
   background-color: white;
   border-top: 6px solid #f4a0ba;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .slideInDown {
@@ -191,6 +191,7 @@ Text Domain: devcreative
   align-items: center;
 }
 
+/*Styles des label*/
 .wpcf7-form label {
   font-family: Poppins;
   font-size: 15px;
@@ -226,7 +227,7 @@ Text Domain: devcreative
   border: 1px solid rgb(208, 207, 207);
 }
 
-/*Styles des labels*/
+/*Taille des labels*/
 .wpcf7 .contact .label-size {
   font-size: 20px;
   font-weight: 400;
@@ -293,16 +294,18 @@ Text Domain: devcreative
   display: inline-block;
   cursor: pointer;
   outline: none;
-  border: 0;
+  border: none;
   vertical-align: middle;
   text-decoration: none;
   background: transparent;
   padding: 0;
 }
+
 .project-button.project-link {
   width: 12rem;
   height: auto;
 }
+
 .project-button.project-link .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
@@ -313,6 +316,7 @@ Text Domain: devcreative
   background: #f4a0ba;
   border-radius: 1.625rem;
 }
+
 .project-button.project-link .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -321,11 +325,13 @@ Text Domain: devcreative
   margin: auto;
   background: #ffffff;
 }
+
 .project-button.project-link .circle .icon.arrow {
   left: 1.5rem;
   height: 0.125rem;
   background: none;
 }
+
 .project-button.project-link .circle .icon.arrow::before {
   position: absolute;
   content: "";
@@ -337,6 +343,7 @@ Text Domain: devcreative
   border-right: 0.125rem solid #fff;
   transform: rotate(45deg);
 }
+
 .project-button.project-link .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -354,23 +361,18 @@ Text Domain: devcreative
   text-align: center;
   text-transform: uppercase;
 }
+
 .project-button:hover .circle {
   width: 100%;
 }
+
 .project-button:hover .circle .icon.arrow {
   background: white;
   transform: translate(1rem, 0);
 }
+
 .project-button:hover .button-text {
   color: white;
-}
-
-.project-description .projet-link {
-  font-family: Poppins;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  font-weight: 300;
-  text-transform: uppercase;
 }
 
 .project-img {
@@ -390,56 +392,84 @@ Text Domain: devcreative
 .langages {
   font-family: Poppins;
   color: rgb(120, 11, 163);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
 }
 
 .single_projet {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-.single_content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: justify;
-  margin: 20px;
+.single_info {
+  padding: 20px;
+  max-width: 500px;
+  height: auto;
+  margin-left: 20px;
 }
-.single_content .single_title {
-  max-width: 400px;
-}
-.single_content h4 {
+.single_info h4 {
   font-family: Poppins;
   font-size: 35px;
   font-weight: 400;
   margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
-.single_content p {
+.single_info a {
+  display: inline;
+  font-family: Poppins;
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+}
+
+.links {
+  margin-top: 25px;
+}
+
+.single_site {
+  margin-left: 30px;
+}
+
+.single_code {
+  margin-left: 60px;
+}
+
+.icon-W {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+}
+
+.icon-Git {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  margin-left: 30px;
+}
+
+.gradient-single {
+  background: linear-gradient(120deg, #f4a0ba 5%, #ea3e8b 20%, #eb7542 30%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.presentation {
   font-family: Poppins;
   font-size: 17px;
   margin-left: 0;
   font-weight: 400;
-  margin-top: 19px;
-}
-
-.single_info ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 38px;
-}
-.single_info p {
-  font-family: Poppins;
-  font-size: 17px;
-  font-weight: 300;
-  margin-top: 20px;
+  margin-top: 30px;
+  text-align: justify;
 }
 
 .single_img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 20px;
 }
 .single_img img {
   width: 90%;
@@ -468,7 +498,7 @@ Text Domain: devcreative
   }
   #header-menu li a {
     padding-bottom: 20px;
-    font-family: poppins-Medium;
+    font-family: poppins;
     font-size: 2rem;
     color: rgb(0, 0, 0);
   }
@@ -532,6 +562,9 @@ Text Domain: devcreative
   #header-menu.active {
     display: block;
   }
+  .fixed {
+    position: fixed;
+  }
   #intro {
     margin: 50px auto 50px auto;
   }
@@ -565,6 +598,13 @@ Text Domain: devcreative
   .project-img {
     margin-right: 0;
   }
+  .single_projet {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .wp-block-heading {
+    padding: 30px 30px 0 30px;
+  }
   .menu-footer_menu-container li a {
     font-size: 0.8rem;
   }
@@ -582,17 +622,21 @@ Text Domain: devcreative
   .projets-title {
     margin: 50px 35px 20px 50px;
   }
+  .single_projet {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .single_info {
+    max-width: 700px;
+  }
+  .single_img img {
+    width: 90%;
+    max-width: 700px;
+  }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
   .single_projet {
     flex-direction: row;
-    padding-top: 50px;
-  }
-  .single_content {
-    width: 50%;
-  }
-  .single_content h4 {
-    margin-top: 0;
   }
   .single_img {
     justify-content: center;
@@ -608,18 +652,9 @@ Text Domain: devcreative
   .project-description .projet-text {
     font-size: 18px;
   }
-  .single_projet {
-    flex-direction: row;
-    padding-top: 50px;
-  }
-  .single_content {
-    width: 50%;
-  }
-  .single_content h4 {
-    margin-top: 0;
-  }
-  .single_img {
-    justify-content: center;
+  .single_img img {
+    width: 90%;
+    max-width: 800px;
   }
 }
 @media (min-width: 1441px) {
@@ -638,18 +673,12 @@ Text Domain: devcreative
   .project-description .projet-text {
     font-size: 18px;
   }
-  .single_projet {
-    flex-direction: row;
-    padding-top: 50px;
+  .single_info {
+    max-width: 600px;
   }
-  .single_content {
-    width: 50%;
-  }
-  .single_content h4 {
-    margin-top: 0;
-  }
-  .single_img {
-    justify-content: center;
+  .single_img img {
+    width: 90%;
+    max-width: 800px;
   }
 }
 body {
@@ -685,8 +714,4 @@ body {
   text-align: justify;
   margin-top: 3%;
   padding: 0 30px 0 30px;
-}
-
-.fixed {
-  position: fixed;
 }/*# sourceMappingURL=style.css.map */

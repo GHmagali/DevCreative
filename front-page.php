@@ -1,12 +1,16 @@
 <?php get_header(); ?>
 
 <section class="page-container">
+    <!-- Introduction -->
     <div id="intro">
         <h2>Bonjour je suis Magali</h2>
         <h1 class="gradient">Développeuse</h1>
         <span class="wordpress">Wordpress</span>
     </div>
+    <!-- Mes projets -->
+    <!-- titre -->
     <h3 class="projets-title">Mes Projets</h3>
+    <!-- Récupération des informations et des images -->
     <?php
     $args = array(
         'post_type'      => 'projet',
@@ -21,9 +25,9 @@
     ?>
             <article class="projets-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="project-description">
-                    <!-- Affiche le titre de la publication -->
+                    <!-- Titre de la publication -->
                     <h4><?php the_title(); ?></h4>
-                    <!-- Affiche la description -->
+                    <!-- Description -->
                     <p class="projet-text"><?php
                                             $description = get_field('Description');
                                             if ($description) {
@@ -31,21 +35,22 @@
                                             }
                                             ?></p>
                     <p class="langages">
-                        <!-- Affiche les langages -->
+                        <!-- Langages de programmation -->
                         <?php the_field('langages'); ?>
                     </p>
+                    <!-- Bouton du lien -->
                     <button class="project-button project-link">
                         <a href="<?php echo esc_url(get_permalink()); ?>" class="project-link">
-                            <span class="circle gradient-button" aria-hidden="true">
+                            <span class="circle" aria-hidden="true">
                                 <span class="icon arrow"></span>
                             </span>
                             <span class="button-text">Voir le Projet</span>
                         </a>
                     </button>
                 </div>
+                <!-- Images projet -->
                 <div class="project-img">
                     <?php
-                    // Récupère l'image à la taille 'large' et l'affiche
                     $thumbnail = get_the_post_thumbnail(get_the_ID(), 'large');
                     if ($thumbnail) {
                         echo $thumbnail;

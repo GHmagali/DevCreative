@@ -20,7 +20,9 @@
     color: black;
     text-transform: uppercase;
     &:hover {
-      font-weight: 400;
+      &:hover {
+        color: #ea3e8b;
+      }
     }
   }
 }
